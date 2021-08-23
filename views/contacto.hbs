@@ -1,0 +1,52 @@
+<main id="mover_contenido">
+
+    <div class="contacto">
+
+        <h2>Contactanos aquí:</h2>
+
+        <form class="formulario_contacto" action="/contacto" method="post">
+
+            <input type="text" name="nombre" required placeholder="Nombre: " autofocus="autofocus">
+
+            <input type="text" name="apellido" required placeholder="Apellido: ">
+
+            <input type="email" name="email" required placeholder="E-mail: ">
+
+            <input type="text" name="telefono" required placeholder="Telefono: ">
+
+            <textarea type="texto" name="mensaje" rows="9" cols="40" required
+                placeholder="Aquí tu inquietud: "></textarea>
+
+            <center><input type="submit" value="Enviar"></center>
+
+        </form>
+        <div>
+            {{#if error}}
+            <h5>{{message}}</h5>
+            {{/if}}
+        </div>
+
+        <div class="informacion">
+            <div class="direccion">
+                <h4>Estamos en:</h4>
+                <p>Direción:Carlos H. Rodriguez 390</p>
+                <p>Teléfono: 299-4484513</p>
+            </div>
+            <div class="horario">
+                <h4>Nuestro horario:</h4>
+                <p>Lunes a viernes: 09:00hs. a 17:00hs.</p>
+                <p>Sábados: 09:00hs. a 13:00hs.</p>
+            </div>
+            <div class="redes">
+                <h4>También nos encontras en:</h4>
+                <ul>
+                    <li><a href="#"><img src="imagenes/face.png"></a></li>
+                    <li><a href="#"><img src="imagenes/twitter.png"></a></li>
+                    <li><a href="#"><img src="imagenes/instagram.jpg"></a></li>
+                    <li><a href="#"><img src="imagenes/youtube.png"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</main>

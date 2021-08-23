@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimun-scale=1.0, maximun-scale=1.0">
+  <title>Mi Libreria</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheets/normalize.css">
+  <link rel="stylesheet" href="stylesheets/milibreria.css">
+</head>
+
+<body>
+
+  {{#if imgPortada}}
+  <header style="background-image: url({{imgPortada}})" id="header">
+    {{/if}}
+
+    {{#unless imgPortada}}
+    <header style="background-image: url(imagenes/imagen_aux.jpg);" id="header">
+      {{/unless}}
+
+      <div class="portada">
+        <div class="titulo_portada">
+          {{#if tituloPortada}}
+          {{#if ubicTitulo}}
+          <h1 class="{{ubicTitulo}}">{{tituloPortada}}</h1>
+          {{/if}}
+          {{/if}}
+
+          {{#unless tituloPortada}}
+          <h1 class="en_inicio">Mi libreria</h1>
+          {{/unless}}
+
+        </div>
+
+      </div>
+      <div class="menu_res" id="menu_res">
+        <i class="fas fa-ellipsis-h"></i>
+      </div>
+      <div class="botones_res" id="mover_botones">
+        <nav>
+          <ul>
+            <li><a class="{{#if isInicio}}activado {{/if}}" href="/" title="Inicio"  ><i class="fas fa-home" ></i></a></li>
+            <li><a class="{{#if isNosotros}}activado {{/if}}" href="/nosotros" title="Nosotros"><i class="fas fa-users"></i></a></li>
+            <li><a class="{{#if isLibros}}activado {{/if}}" href="/libros" title="Libros"><i class="fas fa-book"></i></a></li>
+            <li><a class="{{#if isHistorias}}activado {{/if}}" href="/historias" title="Historias"><i class="fas fa-history"></i></a></li>
+            <li><a class="{{#if isComentarios}}activado {{/if}}" href="/comentarios" title="Comentarios"><i class="fas fa-comments"></i></a></li>
+            <li><a class="{{#if isContacto}}activado {{/if}}" href="/contacto" title="Contacto"><i class="fas fa-envelope"></i></a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="botones">
+        <nav>
+          <ul>
+            <li><a class="{{#if isInicio}}activado {{/if}}" href="/">Inicio</a></li>
+            <li><a class="{{#if isNosotros}}activado {{/if}}" href="/nosotros">Nosotros</a></li>
+            <li><a class="{{#if isLibros}}activado {{/if}}" href="/libros">Libros</a></li>
+            <li><a class="{{#if isHistorias}}activado {{/if}}" href="/historias">Historias</a></li>
+            <li><a class="{{#if isComentarios}}activado {{/if}}" href="/comentarios">Comentarios</a></li>
+            <li><a class="{{#if isContacto}}activado {{/if}}" href="/contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </header>
+    {{{body}}}
+    <footer>
+      <p>Diseñado por Aroví - &copy;2021</p>
+    </footer>
+    <script src="javascripts/mover.js"></script>
+    <script src="javascripts/menu_res.js"></script>
+</body>
+
+</html>

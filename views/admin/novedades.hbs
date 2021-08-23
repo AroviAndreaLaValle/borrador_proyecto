@@ -1,0 +1,36 @@
+<dir style="margin: 0 25px 0 25px;">
+    <h2 style="padding-top: 160px;">Administrador Novedades</h2>
+    <div class="der">
+        <p>
+            Bienvenido {{usuario}}
+            <a style="text-decoration: none;" href="/admin/login/logout"><i class="fas fa-sign-out-alt"
+                    style="color: saddlebrown;"></i></a>
+        </p>
+        <p>
+            <a href="/admin/novedades/agregar"><i class="fa fa-plus" style="color: saddlebrown;" title="Agregar"></i></a>
+        </p>
+    </div>
+    <table class="table">
+
+        <thead class="table-light">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Titulo</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Borrar</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each novedades}}
+            <tr>
+                <th scope="row">{{id_novedad}}</th>
+                <td>{{titulo}}</td>
+                <td><a href="/admin/novedades/modificar/{{id_novedad}}" title="Editar"><i class="fas fa-pen-fancy" style="color: saddlebrown;"></i></a></td>
+                <td><a href="/admin/novedades/borrar/{{id_novedad}}" title="Borrar"><i class="far fa-trash-alt" style="color: saddlebrown;"></i></a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+</dir>

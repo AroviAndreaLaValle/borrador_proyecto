@@ -1,0 +1,24 @@
+<h2 style="padding-top: 160px;">Editar novedades</h2>
+
+<div class="formulario_comentarios">
+
+    <form action="/admin/novedades/modificar" method="post">
+
+        <input type="hidden" value="{{novedad.id_novedad}}" name="id_novedad">
+
+        <input type="text" name="titulo" value="{{novedad.titulo}}" >
+
+        <textarea name="subtitulo" rows="3" cols="40">{{novedad.subtitulo}}</textarea>
+
+        <textarea name="cuerpo" rows="5" cols="40" >{{novedad.cuerpo}}"</textarea>
+
+        <center><input type="submit" value="Editar"></center>
+
+    </form>
+
+</div>
+<div>
+    {{#if error}}
+    <h5>{{message}}</h5>
+    {{/if}}
+</div>

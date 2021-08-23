@@ -1,0 +1,22 @@
+<h2 style="padding-top: 160px;">Nueva novedad</h2>
+
+<div class="formulario_comentarios">
+
+    <form action="/admin/novedades/agregar" method="post">
+
+        <input type="text" name="titulo" required placeholder="Titulo: " autofocus="autofocus">
+
+        <textarea name="subtitulo" rows="3" cols="40" required placeholder="Subtitulo: "></textarea>
+
+        <textarea name="cuerpo" rows="5" cols="40" required placeholder="Cuerpo: "></textarea>
+
+        <center><input type="submit" value="Agregar"></center>
+
+    </form>
+
+</div>
+<div>
+    {{#if error}}
+    <h5>{{message}}</h5>
+    {{/if}}
+</div>

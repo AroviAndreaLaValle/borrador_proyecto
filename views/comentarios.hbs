@@ -1,0 +1,21 @@
+<main id="mover_contenido">
+
+    <div class="comentarios">
+
+        <h2>Nuestros visitante han comentado:</h2>
+        <h3 class="der">Podes dejar el tuyo <a href="/enviar_comentario"><i>aquí</i></a></h3>
+
+        {{#each comentarios}}
+        
+            <div class="comentario">
+
+                <h4>{{nombre}}</h4>
+                <p>Comento: {{{comentario}}}</p>
+
+            </div>
+            
+        {{/each}}
+
+    </div>
+
+</main>
